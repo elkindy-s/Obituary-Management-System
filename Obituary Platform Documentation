@@ -1,0 +1,96 @@
+
+  Obituary Platform Documentation
+
+   1. Overview
+
+The Obituary Platform is a web application designed to allow users to submit, view, and manage obituaries. It uses PHP and SQLite to handle form submissions, store data, and retrieve and display obituaries. This documentation provides details on setting up, developing, and using the application.
+
+   2. Setup
+
+    2.1 Prerequisites
+
+-     Web Server:     Apache, Nginx, or any other compatible server.
+-     PHP:     Version 7.4 or higher.
+-     SQLite:     SQLite database.
+
+    2.2 Installation
+
+1.     Download the Application Code:    
+   - Obtain the source code for the application from the repository or as a zip file.
+
+2.     Configure the Web Server:    
+   - Place the application files in the root directory of your web server.
+   - Ensure the web server has read and write permissions for the directory.
+
+3.     Create and Configure the SQLite Database:    
+
+   - Create the SQLite database file named `obituary_platform.db` in the root directory of your application.
+   - Set up the database schema by creating the necessary tables.
+
+4.     Configure PHP Settings:    
+   - Ensure that `PDO` extension for SQLite is enabled in your `php.ini` configuration.
+
+5.     Verify Permissions:    
+   - Make sure the `obituary_platform.db` file and its directory are writable by the web server.
+
+   3. Development Process
+
+    3.1 File Structure
+
+- `index.php`: The main entry point of the application.
+- `submit_obituary.php`: Handles form submissions and inserts data into the database.
+- `view_obituaries.php`: Retrieves and displays stored obituaries with pagination and social media integration.
+
+    3.2 Code Overview
+
+     3.2.1 `index.php`
+
+- Displays the submission form for new obituaries.
+- Contains HTML form elements and inline CSS for styling.
+- Uses JavaScript for client-side validation.
+
+     3.2.2 `submit_obituary.php`
+
+- Handles form data submission.
+- Connects to the SQLite database.
+- Inserts data into the `obituaries` table.
+- Provides feedback on success or error.
+
+    3.3 Adding Features
+
+1.     Adding New Pages:    
+   - Create new PHP files in the root directory.
+   - Follow existing code patterns for database interaction and HTML output.
+
+2.     Updating Styles:    
+   - Modify the CSS in the `<style>` tag within each PHP file or link to external CSS files.
+
+3.     Enhancing Functionality:
+   - Add JavaScript libraries for improved UI/UX.
+   - Use additional PHP libraries or frameworks as needed.
+
+   4. Usage
+
+    4.1 Submitting an Obituary
+
+1. Navigate to the main page of the application.
+2. Fill out the form with the following details:
+   - Name
+   - Date of Birth
+   - Date of Death
+   - Content
+   - Author
+3. Click the "Submit" button to save the obituary.
+
+4.2 Viewing Obituaries
+
+1. Navigate to the obituary listing page.
+2. Browse through the paginated list of obituaries.
+3. Use the pagination controls to navigate between pages.
+4. Share the page on social media using the provided buttons.
+
+4.3 SEO and Social Media Optimization
+
+- The application automatically handles SEO optimization through meta tags and structured data.
+- Open Graph tags are included for better social media previews.
+
